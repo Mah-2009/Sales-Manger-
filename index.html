@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>sells manger </title>
+</head>
+<body>
+    <div class="div">
+        <div class="head">
+            <h2>curds</h2>
+            <p>program management system</p>
+        </div>
+        
+        <div class="input" autocomplete="off">
+            <form method="post">
+                <input autocomplete="off" type="text" name="title" id="title" placeholder="title">
+                
+                <div class="price" >
+                    <input autocomplete="off" onkeyup="sum()" type="number" name="Price" id="price" placeholder="Price">
+                    <input autocomplete="off" onkeyup="sum()" type="number" name="Tax Fee" id="tax_fee" placeholder="Tax Fee" >
+                    <input autocomplete="off" onkeyup="sum()" type="number" name="Ads" id="ads" placeholder="Ads">
+                    <input autocomplete="off" onkeyup="sum()" type="number" name="discount" id="discount" placeholder="Discount">
+                    <small id="total"></small>                  
+                </div>
+                
+                <input autocomplete="off" type="number" name="Count" id="Count" placeholder="Count">
+                <input  autocomplete="off" type="text" name="Category" id="Category" placeholder="Category">
+                <button id="submit">Create</button>
+                
+            </form>
+        </div>
+
+        <div class="output">
+            <div class="search">
+                
+                <form method="post">
+                    <input autocomplete="off" type="text" name="search" id="Search_btn" placeholder="Search" onkeyup="Search_data(this.value)">
+                </form>
+                
+                <div class="btnSearch">
+                    <button id="s_title" onclick="Search_method(this.id)" >Search By Title</button>
+                    <button id="s_cat" onclick="Search_method(this.id)" >Search By Category</button>
+                </div>
+                <div id="delete_All">
+
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Taxe</th>
+                            <th>Ads</th>
+                            <th>Discount</th>
+                            <th>Count</th>
+                            <th>Total</th>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tbody">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Samsung S24</td>
+                            <td>1200</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>1600</td>
+                            <td>Phones</td>
+                            <td><button id="update">Update</button></td>
+                            <td><button id="delete">Delete</button></td>
+                        </tr> -->
+        
+                        </table >
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <script src="script.js"></script>
+</body>
+</html>
